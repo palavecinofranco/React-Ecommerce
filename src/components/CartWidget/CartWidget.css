@@ -1,0 +1,19 @@
+.carrito{
+    font-size: 20px;
+}
+
+.carrito-contador{
+    position: absolute;
+    background-color: #000;
+    color: #FFF;
+    top: -20px;
+    right: 0;
+    border-radius: 100%;
+    padding: 8px;
+    font-size: 12px;
+    line-height: 5px;
+}
+
+.carrito:hover{
+    cursor: pointer;
+}
