@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,300&family=Noto+Sans&family=Source+Serif+Pro&display=swap');
+
 .header-nav{
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: space-around;
+    position: sticky;
 }
 
   
@@ -13,19 +16,35 @@
 }
 
 .nav-li{
-    padding: 0 20px;
+    padding: 0 15px;
     list-style-type: none;
     height: 100%;
 }
 
 .nav-link{
+    font-family: 'Barlow', sans-serif;
+    font-weight: italic;
+    font-size: 1.2rem;
     text-decoration: none;
     color: #000;
+    position: relative;
 }
 
-.nav-link:hover{
-    color: #D96941;
+.nav-link::before{
+    content: '';
+    height: 1px;
+    width: 0%;
+    background-color: orange;
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    transition: 0.4s ease-out;
 }
+
+.nav-link:hover::before{
+    width: 80%;
+}
+
 
 .li-carrito{
     position: relative;

@@ -1,0 +1,19 @@
+.filter-container{
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.filter-ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+
+.filter-item{
+    padding: 20px;
+
+}
+
+.filter-link{
+    text-decoration: none;
+}
