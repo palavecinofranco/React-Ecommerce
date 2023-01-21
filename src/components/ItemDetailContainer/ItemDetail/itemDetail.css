@@ -1,12 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Sofia+Sans+Semi+Condensed&display=swap');
+
 .detail-container{
     margin: 50px auto;
-    display: flex;
-    flex-direction: column;
-    padding: 40px 0px;
+    display: grid;
+    grid-template-columns: 60% 40%;
     border: 1px solid #CCC;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.333);
+    width: 85%;
+    height: 650px;
+    overflow: hidden;
+}
+
+.container-img img{
+    height: 70%;
+    max-width: 70%;
+    object-fit: contain;
+}
+
+.container-img{
+    height: 100%;
+    max-width:100%;
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 700px;
-    height: 400px;
-    overflow: hidden;
+}
+
+
+.container-details{
+    width: 100%;
+    height: 80%;
+}
+
+.info-container{
+    box-sizing: border-box;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 65% 15% 20%;
+    background-color: #222;
+    color: white;
+}
+
+.itemcount-container{
+    height: 20%;
+}
+
+.detail-title{
+    color: orange;
+    text-align: center;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    font-size: 24px;
+}
+
+.detail-desc{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+.detail-price{
+    text-align: center;
+    font-size: 36px;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    font-weight: 100;
+    line-height: 0px;
+}
+
+.container-env{
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+.btn-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 10px;
 }

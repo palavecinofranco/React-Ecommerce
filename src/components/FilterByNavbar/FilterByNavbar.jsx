@@ -5,11 +5,9 @@ import "./filter.css"
 function FilterByNavbar() {
   return (
     <div className='filter-container'>
-        <ul className='filter-ul'>
-            <li className='filter-item'><Link className='filter-link' to={"category/indumentaria"}>Indumentaria</Link></li>
-            <li className='filter-item'><Link className='filter-link' to={"category/calzados"}>Calzados</Link></li>
-            <li className='filter-item'><Link className='filter-link' to={"category/accesorios"}>Accesorios</Link></li>
-        </ul>
+            <Link className='filter-link ind' to={"category/indumentaria"}><span className='filter-item'>Indumentaria</span></Link>
+            <Link className='filter-link cal' to={"category/calzados"}><span className='filter-item'>Calzados</span></Link>
+            <Link className='filter-link acc' to={"category/accesorios"}><span className='filter-item'>Accesorios</span></Link>
     </div>
   )
 }

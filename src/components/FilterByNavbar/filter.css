@@ -1,19 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
 .filter-container{
     width: 100%;
-    margin-bottom: 100px;
-}
-
-.filter-ul{
+    margin: 0px 0px 50px 0px;
     display: flex;
-    list-style-type: none;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .filter-item{
-    padding: 20px;
+    color: orange;
+    background-color: black;
+    width: 100%;
+    font-size: 20px;
+    padding: 8px 0px;
+    opacity: .7;
+    font-family: 'Nanum Gothic', sans-serif;
 
 }
 
 .filter-link{
+    text-align: center;
     text-decoration: none;
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 200px;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+}
+
+.ind{
+    background-image: url("../../Images/nike-indumentaria.jpg");
+}
+
+.cal{
+    background-image: url("../../Images/nike-snrks.jpg");
+}
+
+.acc{
+    background-image: url("../../Images/nike-accesorios.jpg");
 }

@@ -1,9 +1,9 @@
-import {useState} from "react";
+import { useState } from "react";
 import Button from "../Button/Button";
+import "./itemcount.css"
 
-function ItemCount (props){
+function ItemCount ({onAddToCart, stock}){
     const [count, setCount] = useState(1);
-    const stock = 15;
 
     function handleAdd (){
         if(count < stock){
@@ -18,15 +18,13 @@ function ItemCount (props){
     }
 
     return (
-        <div className="flex-container">
-            <div className="count-container flex-container">
+        <div className="item-count-container">
+            <div className="count-container">
                 <button className="btn" onClick={handleAdd}>+</button>
                 <small>{count}</small>
                 <button className="btn" onClick={handleSubstrac}>-</button>
             </div>
-            <div className="btn-agregar">
-                <Button onClick={props.onAddToCart}>Agregar al carrito</Button>
-            </div>
+            <Button onClick={()=>onAddToCart(count)} color="black" backgroundColor="orange">Agregar al carrito</Button>
         </div>
     )
 }

@@ -49,3 +49,8 @@
 .li-carrito{
     position: relative;
 }
+
+.nav-link-cart{
+    text-decoration: none;
+    color: black;
+}

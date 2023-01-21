@@ -1,13 +1,16 @@
-import getProducts, { getProductByCategory } from "../../services/mockServices";
+import { getProductByCategory } from "../../services/mockServices";
+import { getProducts } from "../../services/firebase";
 import Item from "./Item/Item";
 import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
+import Loader from "../Loader/Loader";
 
 
-function ItemListContainer (props){
+function ItemListContainer (){
 
     const [products, setProducts] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
     let {categoryid} = useParams()
 
     useEffect( ()=>{
@@ -16,21 +19,30 @@ function ItemListContainer (props){
             .then((respuesta)=>{
             setProducts(respuesta)
             })
+            .catch((error) => alert(error))
+            .finally(() => setIsLoading(false))
         }
         else {
             getProductByCategory(categoryid)
             .then((respuesta)=>{
                 setProducts(respuesta)
+                setIsLoading(false)
             })
+            .finally(() => setIsLoading(false))
         }
     }, [categoryid])
 
     return(
-        <ItemList>
-            {
-                products.map((item) => <Item key={item.id} item={item}/>)
+        <>
+        {isLoading? 
+            <Loader/>:
+                    <ItemList>
+                    {
+                        products.map((item) => <Item key={item.id} item={item}/>)
+                    }
+                </ItemList>
             }
-        </ItemList>
+        </>
     )
 }
 

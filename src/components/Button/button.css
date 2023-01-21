@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@300&family=Sofia+Sans+Semi+Condensed&display=swap');
+
 .btn-comprar{
-    padding: 3px;
+    padding: 5px;
     border-radius: 10px;
     border: none;
     cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
 }

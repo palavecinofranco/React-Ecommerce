@@ -1,14 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Sofia+Sans+Semi+Condensed&display=swap');
+
 .card{
     display: flex;
+    position: relative;
     flex-direction: column;
-    border-radius: 20px;
     padding-bottom: 20px;
     padding-top: 5px;
     border: 1px solid #CCC;
     justify-content: center;
     align-items: center;
     width: 240px;
-    height: 320px;
+    height: 300px;
     overflow: hidden;
     text-align: center;
 }
@@ -19,19 +21,18 @@
 }
 
 .card-img{
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     object-fit: contain;
-
 }
 
-.container-img{
+.container-img-item{
     width: 100%;
     height: 60%;
 }
 
-.container-details{
-    height: 40%;
+.container-details-item{
+    height: 30%;
     width: 100%;
 }
 
@@ -42,12 +43,19 @@
 
 .item-title{
     width: 100%;
-    height: 50%;
+    height: 30%;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
 }
 
 .item-price{
     width: 100%;
-    height: 50%;
+    height: 70%;
     font-size: 24px;
     font-weight: 400;
+}
+
+.logo{
+    position: absolute;
+    top: 10px;
+    left: 20px;
 }
