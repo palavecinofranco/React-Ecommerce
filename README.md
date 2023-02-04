@@ -1,25 +1,27 @@
-# Dillinger
+# **`Proyecto React JS`**
+### **`Palavecino Franco Agustin`**
+<!-- tu email -->
+[![Contact Me](https://img.shields.io/badge/Email-informational?style=for-the-badge&logo=Mail.Ru&logoColor=fff&color=red)](mailto:francopalavecinoagus@gmail.com)<!-- tu linkedIn acá abajo -->
+[![LinkedId](https://img.shields.io/badge/LinkedIn-informational?style=for-the-badge&logo=linkedin&logoColor=fff&color=blue)](https://www.linkedin.com/in/franco-palavecino-a9b567240/)<!-- Tu GitHub acá abajo --> 
+[![GitHub Profile](https://img.shields.io/badge/GitHub-informational?style=for-the-badge&logo=GitHub&logoColor=fff&color=23272d)](https://github.com/palavecinofranco)
 
-## _The Last Markdown Editor, Ever_
+# *Información del proyecto:*
 
-[![N|Solid](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4Nhtli5aSkLo8igB8oRJM49A8XBx8f15gENCCcuvf80kuqyUOrZ8giQgy4GZ7Ix_sb6c&usqp=CAU)](https://nodesource.com/products/nsolid)
+El proyecto es una remodelación/creación de la página e-commerce de Nike. La idea surge de la busqueda de una página oficial de Nike Argentina para ver productos, al no encontrar se me ocurrió la idea de recrearla.
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+Deploy (https://react-nike-ecommerce.netlify.app/) :)
 
-App creada para curso de ReactJs de CoderHouse
+## *Version 1.0.0:*
 
-- Ecommerce desarrollado con React
- (https://react-nike-ecommerce.netlify.app/cart)
+- [![App](https://img.shields.io/badge/App-informational?style=for-the-badge&logo=github&logoColor=fff&color=23272d)](https://...)
 
-## Como clonar
+## *Desarrollado con:*
 
-- git clone ....
-- npm install
-- npm run start
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [HTML](https://developer.mozilla.org/es/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/es/docs/Web/CSS)
+- [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript)
+- [React JS](https://es.reactjs.org/)
 
-This text you see here is \*actually- written in Markdown! To get a feel
-for Markdown's syntax, type some text into the left window and
-watch the results in the right.
-
-```
-```
+  <!-- Hecho con amor -->
+[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/palavecinofranco)
