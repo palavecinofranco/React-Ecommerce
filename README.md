@@ -9,11 +9,9 @@
 
 El proyecto es una remodelación/creación de la página e-commerce de Nike. La idea surge de la busqueda de una página oficial de Nike Argentina para ver productos, al no encontrar se me ocurrió la idea de recrearla.
 
-Deploy (https://react-nike-ecommerce.netlify.app/) :)
-
 ## *Version 1.0.0:*
 
-- [![App](https://img.shields.io/badge/App-informational?style=for-the-badge&logo=github&logoColor=fff&color=23272d)](https://...)
+- Deploy [![App](https://img.shields.io/badge/App-informational?style=for-the-badge&logo=github&logoColor=fff&color=23272d)](https://react-nike-ecommerce.netlify.app/)
 
 ## *Desarrollado con:*
 
