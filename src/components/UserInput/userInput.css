@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Sofia+Sans+Semi+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+.input-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px 20px 20px;
+}
+
+.form-user{
+    margin-bottom: 10px;
+}
+
+.input{
+    border: none;
+    border-bottom: 1px solid #CCC;
+    padding: 10px 5px;
+    outline: none;
+}
+
+.input::placeholder{
+    font-family: "Quicksand", sans-serif;
+}
+
+.input:focus{
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    transform: scale(1.01);
+}
+
+.input-label{
+    font-family: "Sofia Sans Semi Condensed", sans-serif;
+    font-size: 20px;
+}

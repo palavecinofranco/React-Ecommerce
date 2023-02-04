@@ -20,11 +20,11 @@ function ItemCount ({onAddToCart, stock}){
     return (
         <div className="item-count-container">
             <div className="count-container">
-                <button className="btn" onClick={handleAdd}>+</button>
+                <button className="btn-count" onClick={handleAdd}>+</button>
                 <small>{count}</small>
-                <button className="btn" onClick={handleSubstrac}>-</button>
+                <button className="btn-count" onClick={handleSubstrac}>-</button>
             </div>
-            <Button onClick={()=>onAddToCart(count)} color="black" backgroundColor="orange">Agregar al carrito</Button>
+            <Button onClick={()=> onAddToCart(count)} color="black" backgroundColor="orange">Agregar al carrito</Button>
         </div>
     )
 }

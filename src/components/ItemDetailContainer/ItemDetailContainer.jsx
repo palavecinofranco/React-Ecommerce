@@ -32,7 +32,7 @@ function ItemDetailContainer() {
             {isLoading?
                 <Loader/>
                 :
-                <ItemDetail onAddToCart={handleAddToCart} id={product.id} title={product.title} image={product.image} detail={product.detail} price={product.price} stock={product.stock}/>
+                <ItemDetail onAddToCart={handleAddToCart} discount={product.discount} id={product.id} title={product.title} image={product.image} detail={product.detail} price={product.price} stock={product.stock}/>
                 }
         </>
     )

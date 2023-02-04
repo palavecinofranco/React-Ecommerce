@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Sofia+Sans+Semi+Condensed&display=swap');
+
+.title-thanks-you{
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.title-container-tx{
+    background-color: rgba(255, 165, 0, .8);
+    display: inline-block;
+    margin-bottom: 30px;
+    text-align: center;
+    transform: skewX(-10deg)
+}
+
+.id-text{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+}
+
+.order-products-container{
+    margin: 30px 20px;
+}
+
+.order-title{
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    font-size: 30px;
+    text-align: start;
+    color: orange;
+}
+
+.order-info-container{
+    margin: 70px 20px;
+}
+
+.loader-container{
+    margin-top: 50px;
+}
+
+.order-buyer{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    margin-left: 50px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+}
+
+.order-total{
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    background-color: #000;
+    color: orange;
+    margin-top: 50px;
+}

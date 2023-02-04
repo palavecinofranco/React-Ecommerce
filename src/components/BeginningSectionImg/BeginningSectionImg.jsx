@@ -6,7 +6,7 @@ function BeginningSectionImg() {
   return (
     <section className='section'>
         <div className='img-container'>
-            <img src={imgPortada} className="img-portada"/>
+            <img src={imgPortada} alt="imagen-portada" className="img-portada"/>
         </div>
     </section>
   )

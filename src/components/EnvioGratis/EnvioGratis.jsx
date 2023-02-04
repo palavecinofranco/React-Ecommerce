@@ -1,7 +1,8 @@
 import React from 'react'
 import "./enviogratis.css"
 
-function EnvioGratis(props) {
+function EnvioGratis() {
+  
   return (
     <div className='container-text'>Envío Gratis</div>
   )

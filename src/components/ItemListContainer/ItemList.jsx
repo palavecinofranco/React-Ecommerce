@@ -1,9 +1,10 @@
 import React from 'react'
+import "./itemList.css"
 
 
 function ItemList(props) {
   return (
-    <div className='flex-container'>{props.children}</div>
+    <div className='item-container container'>{props.children}</div>
   )
 }
 

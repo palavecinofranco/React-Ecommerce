@@ -1,22 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Sofia+Sans+Semi+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
 .itemcart-container{
-        box-sizing: border-box;
+    box-sizing: border-box;
     display: flex;
-    width: 100%;
+    width: 90%;
     border: 1px solid #CCC;
+    border-radius: 3px;
     padding: 10px 30px;
     justify-content: space-between;
     margin-left: 20px;
     flex-wrap: wrap;
+    min-height: 140px;
 }
 
-.item-properties{
+.itemcart-img-container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 100px;
+}
+
+.itemcart-image{
+    object-fit: contain;
+    width: 80px;
+    height: 80px;
+}
+
+.count-container{
+    font-family: 'Quicksand', sans-serif;
+}
+
+.item-properties-container{
     display: flex;
     flex-direction: column;
+}
+
+.itemcart-title{
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
 }
 
 .itemcart-details{
     display: flex;
     gap: 40px;
+}
+
+.itemcart-price-modified{
+    text-decoration: line-through;
+}
+
+.itemcart-cantidad{
+    font-size: 20px;
 }
 
 .remove-btn{

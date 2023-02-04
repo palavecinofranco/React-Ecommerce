@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.image-link-container{
+    height: 550px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: end;
+}
+.link-img {
+    width: 80%;
+    height: 100%;
+    position: relative;
+    color: white;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-right: 20px;
+}
+.img-background{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: .8;
+}
+
+.img-background:hover{
+    opacity: 1  ;
+}
+
+.link-title{
+    position: absolute;
+    left: 30px;
+    bottom: 150px;
+    font-family: 'Anton', sans-serif;
+}
+
+.link-logo{
+    position: absolute;
+    left: 50px;
+    top: 0;
+    opacity: .7;
+}

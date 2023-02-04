@@ -1,0 +1,11 @@
+.searchbar-container{
+    box-sizing: border-box;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
+.btn-busqueda{
+    border: none;
+    background-color: transparent;
+}
