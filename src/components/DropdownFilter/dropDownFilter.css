@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Sofia+Sans+Semi+Condensed&display=swap');
+
+.dropdown{
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+}
+
+.drop-btn{
+    width: 100%;
+    border-radius: 0;
+    background-color: black;
+    border: none;
+}
+
+.dropdown-menu{
+    transform: translate(0px, 35px) !important;
+    width: 100% !important;
+    border-radius: 0 !important;
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+    background-color: black;
+}
+
+.dropdown-item{
+    color: white !important;
+}
+
+.dropdown-item:hover{
+    color: black !important;
+    background-color: orange;
+}

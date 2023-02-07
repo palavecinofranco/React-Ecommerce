@@ -19,11 +19,10 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-    opacity: .8;
 }
 
-.img-background:hover{
-    opacity: 1  ;
+.link-img:hover .img-background{
+    opacity: .8;
 }
 
 .link-title{

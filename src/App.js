@@ -12,14 +12,14 @@ import HeaderSlider from './components/HeaderSlider/HeaderSlider';
 import Footer from './components/Footer/Footer';
 import { exportArray } from './services/firebase';
 import PurchaseCompleted from './components/PurchaseCompleted/PurchaseCompleted';
-import Swal from 'sweetalert2'
+import NavNavigation from './components/NavBar/NavNavigation';
 
 function App() {
   return (
     <BrowserRouter>
     <CartProvider>
         <HeaderSlider/>
-        <NavBar />
+        <NavNavigation/>
         <Routes>
           <Route path='/' element={<HomePage/>}/>
           <Route path='details/:productid' element={<ItemDetailContainer/>}/>
