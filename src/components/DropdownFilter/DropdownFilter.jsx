@@ -2,6 +2,7 @@ import React from 'react'
 import "./dropDownFilter.css"
 
 function DropdownFilter({title, content}) {
+
   return (
     <div className="dropdown">
   <button className="btn btn-secondary dropdown-toggle drop-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -9,7 +10,7 @@ function DropdownFilter({title, content}) {
   </button>
   <ul className="dropdown-menu">
     {
-        content.map((link)=><li key={link.index}><a className="dropdown-item" href="#">{link}</a></li>)
+        content.map((link)=><li key={link.id}><a className="dropdown-item" href="/">{link.title}</a></li>)
     }
   </ul>
 </div>

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function NavNavigation() {
   return (
     <nav className="header-nav">
-            <Link to={"/"}><img src={logo} alt="logo" width={125} height={125} className="logoNike"/></Link>
+            <Link to={"/"}><img src={logo} alt="logo" width={150} className="logoNike"/></Link>
             <ul className='nav-ul'>
                 <li className='nav-li'><Link className="nav-link" to={"/productos"}>Productos</Link></li>
                 <li className='nav-li'><Link className="nav-link" to={"/"}>Tiendas</Link></li>
