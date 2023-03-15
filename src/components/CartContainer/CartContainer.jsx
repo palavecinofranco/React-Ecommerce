@@ -8,6 +8,7 @@ import logoNike from "../../Images/logonikepipa.png";
 import { createOrder } from "../../services/firebase";
 import Swal from 'sweetalert2'
 import UserInput from "../UserInput/UserInput";
+import { Grid } from "@mui/material";
 
 
 function CartContainer() {
@@ -91,12 +92,15 @@ function CartContainer() {
   } else {
     return (
       <>
-      <div className="cart-container">
+        <Grid container>
+          <Grid item sm={12} md={7}>
         <div className="itemscart-container">
           {cart.map((item) => (
             <ItemCart item={item} key={item.id} />
           ))}
         </div>
+        </Grid>
+        <Grid item sm={12} md={5}>
         <div className="finish-container">
           <form className="form-user">
             <UserInput value={userData.name} type={"text"} name={"name"} placeholder={"Ingresa tu nombre"} onChange={onInputChange} title={"Nombre"}/>
@@ -111,7 +115,8 @@ function CartContainer() {
             <Button color="green" onClick={handleCheckout} backgroundColor="greenyellow" disabled={formIsInvalid()}>Comprar</Button>
           </div>
         </div>
-      </div>
+        </Grid>
+        </Grid>
       <div className="text-link">
       <Link to="/productos" className="shop-link">Continuar comprando
         </Link>

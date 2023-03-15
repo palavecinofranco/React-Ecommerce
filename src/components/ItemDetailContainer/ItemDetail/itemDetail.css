@@ -2,15 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 
 .detail-container{
-    margin: 50px auto;
-    display: grid;
-    grid-template-columns: 60% 40%;
-    border: 1px solid #CCC;
-    border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.333);
-    width: 90%;
-    height: 600px;
-    overflow: hidden;
 }
 
 .container-img img{
@@ -30,22 +22,6 @@
 
 .container-details{
     width: 100%;
-    height: 80%;
-}
-
-.info-container{
-    box-sizing: border-box;
-    padding: 20px;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-rows: 65% 15% 20%;
-    background-color: #222;
-    color: white;
-}
-
-.itemcount-container{
-    height: 20%;
 }
 
 .detail-title{
@@ -65,12 +41,6 @@
     font-size: 36px;
     font-family: 'Sofia Sans Semi Condensed', sans-serif;
     font-weight: 100;
-    line-height: 0px;
-}
-
-.container-env{
-    margin-top: 50px;
-    margin-left: 10px;
 }
 
 .btn-container{
@@ -107,4 +77,12 @@
 .disponibles{
     color: #DDD;
     font-family: 'Quicksand', sans-serif;
+}
+
+.price-count-container{
+    height: 100%;
+    gap: 20px;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
 }
