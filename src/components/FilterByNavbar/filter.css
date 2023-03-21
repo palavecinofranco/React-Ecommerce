@@ -33,6 +33,19 @@
     background-size: cover;
 }
 
+.link-category{
+    text-decoration: none;
+    color: #565656;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 7px;
+    width: 100%;
+    font-size: 24px;
+    font-family: "Roboto", sans-serif;
+    background-color: rgba(195, 195, 195, 0.333);
+}
+
 .ind{
     background-image: url("../../Images/nike-indumentaria.jpg");
 }

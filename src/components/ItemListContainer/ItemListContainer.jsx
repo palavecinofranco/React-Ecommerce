@@ -5,14 +5,14 @@ import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import Loader from "../Loader/Loader";
-import FeaturedProducts from "../FeaturedProducts/FeaturedProducts";
+import { getProductManAndOffert } from "../../services/firebase";
 
 
 function ItemListContainer (){
 
     const [products, setProducts] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    let {categoryid} = useParams()
+    let {categoryid} = useParams();
 
     useEffect( ()=>{
         if (!categoryid){
@@ -23,7 +23,7 @@ function ItemListContainer (){
             .catch((error) => alert(error))
             .finally(() => setIsLoading(false))
         }
-        else {
+        else if(categoryid){
             setIsLoading(true)
             getProductByCategory(categoryid)
             .then((respuesta)=>{
@@ -42,7 +42,7 @@ function ItemListContainer (){
             <>
                 <ItemList>
                 {
-                    products.map((item) => <Item key={item.id} item={item} heightS={"250px"} widthS={250}/>)
+                    products.map((item) => <Item key={item.id} item={item}/>)
                 }
                 </ItemList>
             </>

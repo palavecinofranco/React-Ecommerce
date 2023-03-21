@@ -8,7 +8,6 @@ import NavBar from '../components/NavBar/NavBar'
 function ProductsPage() {
   return (
     <>
-        <NavBar/>
         <FilterByNavbar/>
         <ItemListContainer/>
         <FeaturedProducts list={getFeaturedProducts}>Artículos destacados</FeaturedProducts>

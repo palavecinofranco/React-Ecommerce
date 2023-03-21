@@ -1,4 +1,6 @@
+
 import React from 'react'
+import { Link } from 'react-router-dom'
 import "./dropDownFilter.css"
 
 function DropdownFilter({title, content}) {
@@ -10,7 +12,7 @@ function DropdownFilter({title, content}) {
   </button>
   <ul className="dropdown-menu">
     {
-        content.map((link)=><li key={link.id}><a className="dropdown-item" href="/">{link.title}</a></li>)
+        content.map((link)=><li key={link.id}><Link className="dropdown-item" to={`/${title.toLowerCase()}/${link.category}`}>{link.title}</Link></li>) 
     }
   </ul>
 </div>

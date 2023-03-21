@@ -5,20 +5,22 @@ import logo from "./logonike.svg"
 import { Link } from "react-router-dom";
 import { Hidden, IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import  Navbar from "./NavBar";
 
 function NavNavigation() {
 
-  const [buttonState, setButtonState] = useState(false);
+  const [navHeight, setNavHeight] = useState("0px");
 
   function openMenu(){
-    if(buttonState===false){
-      setButtonState(true)
+    if(navHeight=="0px"){
+      setNavHeight("140px")
     } else{
-      setButtonState(false)
+      setNavHeight("0px")
     }
   }
 
   return (
+    <>
     <>
       <nav className="header-nav">
             <Link to={"/"}><img src={logo} alt="logo" width={150} className="logoNike"/></Link>
@@ -35,19 +37,13 @@ function NavNavigation() {
               </IconButton>
             </Hidden>
       </nav>
-      <nav className='nav-menu'>
+      <nav className='nav-menu' style={{height:navHeight}}>
           <li className='nav-li'><Link className="nav-link" to={"/productos"}>Productos</Link></li>
           <li className='nav-li'><Link className="nav-link" to={"/"}>Tiendas</Link></li>
           <li className='nav-li li-carrito'><Link className="nav-link-cart" to={"/cart"}><CartWidget /></Link></li>
         </nav>
-      {
-       buttonState && 
-        <nav className='nav-menu nav-animation'>
-          <li className='nav-li'><Link className="nav-link" to={"/productos"}>Productos</Link></li>
-          <li className='nav-li'><Link className="nav-link" to={"/"}>Tiendas</Link></li>
-          <li className='nav-li li-carrito'><Link className="nav-link-cart" to={"/cart"}><CartWidget /></Link></li>
-        </nav>
-      }
+        </>
+      <Navbar/>
       </>
   )
 }

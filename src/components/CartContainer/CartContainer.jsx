@@ -14,8 +14,6 @@ import { Grid } from "@mui/material";
 function CartContainer() {
   const { cart, getTotalPrice, clear, getPriceWithDiscount } = useContext(cartContext);
   const navigate = useNavigate();
-  const [backgroundColor, setBackgroundColor] = useState("greenyellow");
-  const [color, setColor] = useState("green");
   const [userData, setUserData] = useState({
     name: "",
     email: "",
@@ -35,13 +33,13 @@ function CartContainer() {
   }
 
   function handleCheckout(evt) {
-    const products = cart.map(({ id, title, quantity }) => ({
-      id,
-      price: getPriceWithDiscount(id),
+    const products = cart.map(({ idProduct, title, quantity }) => ({
+      idProduct,
+      price: getPriceWithDiscount(idProduct),
       title,
       quantity,
     }));
-    const order = {
+    const orderBuy = {
       buyer: {
         name: userData.name,
         email: userData.email,
@@ -51,7 +49,7 @@ function CartContainer() {
       total: getTotalPrice(),
       date: new Date(),
     };
-    createOrder(order).then((id) => {
+    createOrder(orderBuy).then((idProduct) => {
       let timerInterval;
       Swal.fire({
         title: "Finalizando tu compra...",
@@ -71,7 +69,7 @@ function CartContainer() {
       }).then((result) => {
         if (result.dismiss === Swal.DismissReason.timer) {
           clear();
-          navigate(`/completed-purchase/${id}`);
+          navigate(`/completed-purchase/${idProduct}`);
         }
       });
     });
@@ -96,7 +94,7 @@ function CartContainer() {
           <Grid item sm={12} md={7}>
         <div className="itemscart-container">
           {cart.map((item) => (
-            <ItemCart item={item} key={item.id} />
+            <ItemCart item={item} key={item.idProduct} />
           ))}
         </div>
         </Grid>

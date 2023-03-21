@@ -66,10 +66,7 @@
     align-items: center;
     gap: 20px;
     background-color: #eee;
-    padding: 20px;
-    display: none;
-}
-
-.nav-animation{
     display: flex;
+    transition: all 1s;
+    overflow: hidden;
 }

@@ -40,7 +40,7 @@ function PurchaseCompleted() {
             {
                 items.map((product)=>{
                     return(
-                        <PurchaseProduct key={product.id} product={product}/>
+                        <PurchaseProduct key={product.idProduct} product={product}/>
                     )
                 })
             }

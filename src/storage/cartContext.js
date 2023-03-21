@@ -44,7 +44,7 @@ function CartProvider (props) {
     }
 
     function isInCart(itemId) {
-        let itemIndex = cart.findIndex((item) => item.id === itemId)
+        let itemIndex = cart.findIndex((item) => item.idProduct === itemId)
         if(itemIndex !== -1)
             return true;
         else
@@ -67,14 +67,14 @@ function CartProvider (props) {
         setCart(newCart)
     }
 
-    function getPriceWithDiscount(productId){
-        let product = cart.find(item=>item.id === productId)
+    function getPriceWithDiscount(idProduct){
+        let product = cart.find(item=>item.idProduct === idProduct)
         return product.price -(product.price*product.discount/100);
     }
 
-    function getSubTotalPrice (productId) {
-        let product = cart.find(item=>item.id === productId)
-        return getPriceWithDiscount(productId) * product.quantity;
+    function getSubTotalPrice (idProduct) {
+        let product = cart.find(item=>item.idProduct === idProduct)
+        return getPriceWithDiscount(idProduct) * product.quantity;
     }
 
     return(

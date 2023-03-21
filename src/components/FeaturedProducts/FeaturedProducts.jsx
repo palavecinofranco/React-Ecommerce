@@ -71,14 +71,8 @@ function FeaturedProducts({list, children}) {
       }}
       >
         {
-          products.map((product)=>{
-              return(
-                <SwiperSlide key={product.id}>
-                  <Item item={product}/>
-                </SwiperSlide>
-              )
-            })
-          }
+          products.map(product=><SwiperSlide key={product.idProduct}><Item item={product} key={product.idProduct}/></SwiperSlide>)
+        }
       </Swiper>
     </div>
   )

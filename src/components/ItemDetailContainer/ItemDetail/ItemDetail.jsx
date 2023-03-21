@@ -7,13 +7,13 @@ import Button from '../../Button/Button'
 import { cartContext } from '../../../storage/cartContext'
 import { Grid } from '@mui/material'
 
-function ItemDetail({title, image, detail, price, onAddToCart, stock, quantity, id, discount}) {
+function ItemDetail({title, image, detail, price, onAddToCart, stock, quantity, idProduct, discount}) {
 
   const {isInCart} = useContext(cartContext);
   let priceWithDiscount = price-(price*discount/100);
 
   return (
-  <Grid container sx={{m:"50px auto", border:"1px solid #CCC", borderRadius:3, width:"90%", height:"100vh"}}>
+  <Grid container sx={{m:"50px auto 600px auto", width:"90%", height:"90vh"}}>
     <Grid item xs={12} md={8}>
         <div className="container-img">
             <img src={image} alt={title} className="detail-img"/>
@@ -44,7 +44,7 @@ function ItemDetail({title, image, detail, price, onAddToCart, stock, quantity, 
               </div>
             }
             {
-              isInCart(id)?<div className='btn-container'><Link to="/cart"><Button color="black" backgroundColor="orange">Ir al carrito</Button></Link></div>
+              isInCart(idProduct)?<div className='btn-container'><Link to="/cart"><Button color="black" backgroundColor="orange">Ir al carrito</Button></Link></div>
               :
               <div>
                 <ItemCount className="itemcount-container" onAddToCart={onAddToCart} stock={stock} quantity={quantity}/><small className='disponibles'>Disponibles: {stock}</small>

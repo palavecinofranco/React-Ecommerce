@@ -53,7 +53,7 @@ export async function getFeaturedProducts(){
     const productRef = collection(db, "products")
     const q = query(productRef, where("featured", "==", true))
     const snapshot = await getDocs(q)
-    const products = snapshot.docs.map((elem) => ({...elem.data()}))
+    const products = snapshot.docs.map((elem) => ({...elem.data(), id: elem.id}))
     return products;
 }
 
@@ -61,14 +61,47 @@ export async function getOffProducts(){
     const productRef = collection(db, "products")
     const q = query(productRef, where("discount", ">", 0))
     const snapshot = await getDocs(q)
-    const products = snapshot.docs.map((elem) => ({...elem.data()}))
+    const products = snapshot.docs.map((elem) => ({...elem.data(), id:elem.id}))
     return products;
+}
+
+export async function getProductByGenderAndOffert(gender){
+    let products = []
+    await getOffProducts().then(respuesta =>{
+        products = respuesta
+    })
+    return products.filter((products => products.gender == gender))
+}
+
+export async function getProductByGenderAndCategory(gender, category){
+    const productRef = collection(db, "products")
+    const q = query(productRef, where("category", "==", category))
+    const snapshot = await getDocs(q)
+    const products = snapshot.docs.map((elem) => ({...elem.data(), id: elem.id}))
+    const productsFilter = products.filter((products => products.gender == gender))
+    return productsFilter;
+}
+
+export async function getShoesByLine(line){
+    const productRef = collection(db, "products")
+    const q = query(productRef, where("line", "==", line))
+    const snapshot = await getDocs(q)
+    const products = snapshot.docs.map((elem) => ({...elem.data(), id: elem.id}))
+    return products;
+}
+
+export async function getProductByCategoryAndOffert(category){
+    let products = []
+    await getOffProducts().then(respuesta =>{
+        products = respuesta
+    })
+    return products.filter((products => products.category == category))
 }
 
 export async function exportArray(){
   const products = [
     {   
-        id: 1,
+        idProduct:1,
         title: "Remera Sportswear",
         category: "indumentaria",
         price: 4500,
@@ -77,10 +110,11 @@ export async function exportArray(){
         stock: 15,
         quantity: 0,
         discount: 25,
-        featured: true
+        featured: true,
+        gender: "hombre"
     },
     {
-        id: 2,
+        idProduct:2,
         title: "Short Sportwear",
         category: "indumentaria",
         price: 7000,
@@ -89,22 +123,25 @@ export async function exportArray(){
         stock: 15,
         quantity: 0,
         discount: 0,
-        featured: false
+        featured: false,
+        gender: "hombre"
     },
     {
-        id: 3,
+        idProduct:3,
         title: "Zapatillas AIR FORCE 1 SHADOW",
         category: "calzados",
         price: 58000,
-        detail: "Zapatillas Nike Air Force 1 Shadow para mujer colores variados",
-        image: "https://essential.vtexassets.com/arquivos/ids/682419-800-auto?v=638095064566370000&width=800&height=auto&aspect=true",
+        detail: "Zapatillas Nike Air Force 1 Shadow para mujer color blanca",
+        image: "https://stockx.imgix.net/Nike-Air-Force-1-Shadow-Triple-White-W-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&dpr=2&trim=color&updated_at=1603481985",
         stock: 15,
         quantity: 0,
         discount: 30,
-        featured: true
+        featured: true,
+        gender: "mujer",
+        line: "nike"
     },
     {
-        id: 4,
+        idProduct:4,
         title: "Gorra Dri-fit Legacy 91 Tech",
         category: "accesorios",
         price: 9000,
@@ -113,10 +150,11 @@ export async function exportArray(){
         stock: 15,
         quantity: 0,
         discount: 0,
-        featured: false
+        featured: false,
+        gender: "unisex"
     },
     {
-        id: 5,
+        idProduct:5,
         title: "Riñonera Running Hydration 3.0",
         category: "accesorios",
         price: 15000,
@@ -125,10 +163,11 @@ export async function exportArray(){
         stock: 8,
         quantity: 0,
         discount: 5,
-        featured: true
+        featured: true,
+        gender: "unisex"
     },
     {
-        id: 6,
+        idProduct:6,
         title: "ZAPATILLAS AIR VAPORMAX",
         category: "calzados",
         price: 87000,
@@ -137,22 +176,26 @@ export async function exportArray(){
         stock: 6,
         quantity: 0,
         discount: 0,
-        featured: false
+        featured: false,
+        gender: "hombre",
+        line: "nike"
     },
     {
-        id: 7,
+        idProduct:7,
         title: "ZAPATILLAS AIR MAX 97",
         category: "calzados",
         price: 65000,
         detail: "Zapatillas Nike Air Max 97 de moda para hombre color blanca",
-        image: "https://essential.vtexassets.com/arquivos/ids/683075-800-auto?v=638095068858000000&width=800&height=auto&aspect=true",
+        image: "https://www.moov.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dw3f42949c/products/NI_DM0027-100/NI_DM0027-100-1.JPG",
         stock: 5,
         quantity: 0,
         discount: 15,
-        featured: true
+        featured: true,
+        gender: "hombre",
+        line: "nike"
     },
     {
-        id: 8,
+        idProduct:8,
         title: "Zapatillas Air Max Furyosa",
         category: "calzados",
         price: 65000,
@@ -161,10 +204,12 @@ export async function exportArray(){
         stock: 5,
         quantity: 0,
         discount: 0,
-        featured: true
+        featured: true,
+        gender: "mujer",
+        line: "nike"
     },
     {
-        id: 9,
+        idProduct:9,
         title: "LLAVERO LANYARD",
         category: "accesorios",
         price: 4500,
@@ -173,7 +218,8 @@ export async function exportArray(){
         stock: 100,
         quantity: 0,
         discount: 0,
-        featured: false
+        featured: false,
+        gender: "unisex"
     }
 ]
 
@@ -184,8 +230,7 @@ export async function exportArray(){
 
 export async function createOrder(order){
     const orderRef = collection(db, "order")
-    let respuesta = await addDoc(orderRef, order)
-    console.log(respuesta)
+    let respuesta = await addDoc((orderRef), order)
     return respuesta.id
 }
 

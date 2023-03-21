@@ -7,11 +7,11 @@ import ItemDetail from './ItemDetail/ItemDetail';
 
 
 function ItemDetailContainer() {
+    const [isLoading, setIsLoading] = useState(true);
     const [product, setProduct] = useState([]);
     let params = useParams();
 
     const {addToCart} = useCartContext();
-    const [isLoading, setIsLoading] = useState(true);
 
     function handleAddToCart(quantity){
         const productAndCount = {...product, quantity:quantity};
@@ -32,7 +32,7 @@ function ItemDetailContainer() {
             {isLoading?
                 <Loader/>
                 :
-                <ItemDetail onAddToCart={handleAddToCart} discount={product.discount} id={product.id} title={product.title} image={product.image} detail={product.detail} price={product.price} stock={product.stock}/>
+                <ItemDetail onAddToCart={handleAddToCart} discount={product.discount} id={product.idProduct} title={product.title} image={product.image} detail={product.detail} price={product.price} stock={product.stock}/>
                 }
         </>
     )

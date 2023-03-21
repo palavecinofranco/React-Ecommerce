@@ -6,7 +6,7 @@ import Button from '../Button/Button';
 
 function ItemCart({item}) {
     const { removeItem, addQuantity, subtractQuantity, getPriceWithDiscount, getSubTotalPrice } = useCartContext();
-    const {image, title, price, quantity, id, stock, discount} = item;
+    const {image, title, price, quantity, idProduct, stock, discount} = item;
 
   return (
     <div className='itemcart-container'>
@@ -17,28 +17,28 @@ function ItemCart({item}) {
         <div className='item-properties-container'>
           <h4 className='itemcart-title'>{title.toUpperCase()}</h4>
           {
-            discount?<div><small className='itemcart-price-modified'>${price}</small><h4 className='itemcart-price'>${getPriceWithDiscount(id)}</h4></div>
+            discount?<div><small className='itemcart-price-modified'>${price}</small><h4 className='itemcart-price'>${getPriceWithDiscount(idProduct)}</h4></div>
             :
             <h4 className='itemcart-price'>${price}</h4>
           }
-          <span>Subtotal: ${getSubTotalPrice(id)}</span>
+          <span>Subtotal: ${getSubTotalPrice(idProduct)}</span>
         </div>
       </div>
-        <div className='count-container'>Cantidad
+        <div className='count-container'>CantidProductad
           {
-            quantity===stock?<Button disabled={true} onClick={()=>addQuantity(id)}>+</Button>
+            quantity===stock?<Button disabled={true} onClick={()=>addQuantity(idProduct)}>+</Button>
             :
-            <Button onClick={()=>addQuantity(id)}>+</Button>
+            <Button onClick={()=>addQuantity(idProduct)}>+</Button>
           }
-          <h3 className='itemcart-cantidad'>{quantity}</h3>
+          <h3 className='itemcart-cantidProductad'>{quantity}</h3>
           {
-            quantity===1?<Button disabled={true} onClick={()=>subtractQuantity(id)}>-</Button>
+            quantity===1?<Button disabled={true} onClick={()=>subtractQuantity(idProduct)}>-</Button>
             :
-            <Button onClick={()=>subtractQuantity(id)}>-</Button>
+            <Button onClick={()=>subtractQuantity(idProduct)}>-</Button>
           }
         </div>
-        <button onClick={() => removeItem(id)} className="remove-btn">
-            <i className="fa-solid fa-trash"></i>
+        <button onClick={() => removeItem(idProduct)} className="remove-btn">
+            <i className="fa-solidProduct fa-trash"></i>
         </button>
   </div>
   )
