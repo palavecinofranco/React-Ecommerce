@@ -98,7 +98,7 @@ function CartContainer() {
           ))}
         </div>
         </Grid>
-        <Grid item sm={12} md={5}>
+        <Grid item xs={12} md={5}>
         <div className="finish-container">
           <form className="form-user">
             <UserInput value={userData.name} type={"text"} name={"name"} placeholder={"Ingresa tu nombre"} onChange={onInputChange} title={"Nombre"}/>

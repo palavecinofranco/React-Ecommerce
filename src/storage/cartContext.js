@@ -9,7 +9,7 @@ function CartProvider (props) {
     let newCart = useDeepCopy(cart);
 
     function addToCart ( product ) {
-        let productIndex = cart.findIndex(item => product.id === item.id)
+        let productIndex = newCart.findIndex(item => product.idProduct === item.idProduct)
         if(productIndex === -1){
             newCart.push(product)
             setCart(newCart)
@@ -18,14 +18,14 @@ function CartProvider (props) {
 
     function getTotalItemsInCart () {
         let total = 0;
-        cart.forEach((product) =>{
+        newCart.forEach((product) =>{
             total += product.quantity;
         })
         return total;
     }
 
     function removeItem(itemId){
-        let productIndex = cart.findIndex(product => product.id === itemId)
+        let productIndex = newCart.findIndex(product => product.productId === itemId)
         newCart.splice(productIndex, 1)
         setCart(newCart);
     }
@@ -43,8 +43,8 @@ function CartProvider (props) {
         return total;
     }
 
-    function isInCart(itemId) {
-        let itemIndex = cart.findIndex((item) => item.idProduct === itemId)
+    function isInCart(itemTitle) {
+        let itemIndex = cart.findIndex(item => item.title === itemTitle)
         if(itemIndex !== -1)
             return true;
         else
@@ -52,7 +52,7 @@ function CartProvider (props) {
     }
 
     function addQuantity(productId){
-        let product = newCart.find(item=>item.id === productId)
+        let product = newCart.find(item=>item.idProduct === productId)
         if(product.quantity<product.stock){
             product.quantity++
         }
@@ -60,7 +60,7 @@ function CartProvider (props) {
     }
 
     function subtractQuantity(productId){
-        let product = newCart.find(item=>item.id === productId)
+        let product = newCart.find(item=>item.idProduct === productId)
         if(product.quantity>1){
             product.quantity--
         }

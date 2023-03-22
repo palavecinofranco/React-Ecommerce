@@ -13,6 +13,7 @@ import { exportArray } from './services/firebase';
 import PurchaseCompleted from './components/PurchaseCompleted/PurchaseCompleted';
 import NavNavigation from './components/NavBar/NavNavigation';
 import FilteredItemList from './components/FilteredItemList/FilteredItemList';
+import FilteredProductsPage from './pages/FilteredProductsPage';
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
           <Route path='/' element={<HomePage/>}/>
           <Route path='details/:productid' element={<ItemDetailContainer/>}/>
           <Route path='category/:categoryid' element={<ProductsPage/>}/>
-          <Route path=':genero/:generocategory' element={<FilteredItemList/>}/>
+          <Route path=':genero/:generocategory' element={<FilteredProductsPage/>}/>
           <Route path='/cart' element={<CartContainer/>}/>
           <Route path='*' element={<PageNotFound/>}/>
           <Route path='/productos' element={<ItemListWithFilter/>}/>
@@ -34,7 +35,6 @@ function App() {
       <Footer/>
     </CartProvider>
     </BrowserRouter>
-    <button onClick={exportArray}>Export</button>
     </>
   );
 }

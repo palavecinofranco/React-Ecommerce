@@ -9,8 +9,8 @@
     border-radius: 3px;
     padding: 10px 30px;
     justify-content: space-between;
-    margin-left: 20px;
     flex-wrap: wrap;
+    margin: 0 auto;
     min-height: 140px;
 }
 

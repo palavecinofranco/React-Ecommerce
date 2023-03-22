@@ -5,7 +5,6 @@ import logo from "./logonike.svg"
 import { Link } from "react-router-dom";
 import { Hidden, IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import  Navbar from "./NavBar";
 
 function NavNavigation() {
 
@@ -43,7 +42,6 @@ function NavNavigation() {
           <li className='nav-li li-carrito'><Link className="nav-link-cart" to={"/cart"}><CartWidget /></Link></li>
         </nav>
         </>
-      <Navbar/>
       </>
   )
 }

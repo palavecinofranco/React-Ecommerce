@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import "./itemDetail.css"
 import ItemCount from '../../ItemCount/ItemCount'
 import EnvioGratis from '../../EnvioGratis/EnvioGratis'
@@ -13,7 +13,7 @@ function ItemDetail({title, image, detail, price, onAddToCart, stock, quantity, 
   let priceWithDiscount = price-(price*discount/100);
 
   return (
-  <Grid container sx={{m:"50px auto 600px auto", width:"90%", height:"90vh"}}>
+  <Grid container sx={{m:"50px auto 400px auto", width:"80%", height:"600px"}}>
     <Grid item xs={12} md={8}>
         <div className="container-img">
             <img src={image} alt={title} className="detail-img"/>
@@ -44,7 +44,7 @@ function ItemDetail({title, image, detail, price, onAddToCart, stock, quantity, 
               </div>
             }
             {
-              isInCart(idProduct)?<div className='btn-container'><Link to="/cart"><Button color="black" backgroundColor="orange">Ir al carrito</Button></Link></div>
+              isInCart(title)?<div className='btn-container'><Link to="/cart"><Button color="black" backgroundColor="orange">Ir al carrito</Button></Link></div>
               :
               <div>
                 <ItemCount className="itemcount-container" onAddToCart={onAddToCart} stock={stock} quantity={quantity}/><small className='disponibles'>Disponibles: {stock}</small>

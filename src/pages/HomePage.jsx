@@ -10,6 +10,7 @@ import { getFeaturedProducts, getOffProducts } from '../services/firebase'
 function HomePage() {
   return (
     <>
+        <NavBar/>
         <BeginningSectionImg/>
         <FilterByNavbar/>
         <ItemListContainer/>
