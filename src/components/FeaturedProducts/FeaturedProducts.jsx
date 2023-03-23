@@ -32,8 +32,12 @@ function FeaturedProducts({list, children}) {
           slidesPerView: 1,
           spaceBetween: 40
         },
+        325:{
+          slidesPerView: 0.8,
+          spaceBetween: 0
+        },
         370:{
-          slidesPerView: 1,
+          slidesPerView: 1.2,
           spaceBetween: 0
         },
         410:{

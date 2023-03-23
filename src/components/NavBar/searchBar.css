@@ -1,11 +1,34 @@
 .searchbar-container{
     box-sizing: border-box;
-    width: 60%;
+    width: 90%;
     margin: 0px auto;
-    margin-bottom: 60px;
 }
 
 .btn-busqueda{
     border: none;
     background-color: transparent;
+    color: white;
+}
+
+.search-form{
+    color: white;
+}
+
+.input-group{
+    border: none !important;
+}
+
+.input-group-text{
+    border-color: #ed6c02;
+    background-color: #000;
+}
+
+.form-control{
+    border-color: #ed6c02;
+    color: white !important;
+}
+
+
+.form-control::placeholder{
+    color: white;
 }

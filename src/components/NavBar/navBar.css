@@ -6,6 +6,9 @@
     width: 100%;
     align-items: center;
     justify-content: space-around;
+    background-color: #000;
+    padding: 0px 20px;
+    color: white;
 }
 
   
@@ -25,9 +28,8 @@
 .nav-link{
     font-family: 'Barlow', sans-serif;
     font-weight: italic;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-decoration: none;
-    color: #000;
     position: relative;
 }
 
@@ -60,6 +62,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 40px;
 }
 
 .nav-menu{
@@ -67,8 +70,12 @@
     width: 100%;
     align-items: center;
     gap: 20px;
-    background-color: #eee;
     display: flex;
     transition: all 1s;
     overflow: hidden;
+    color: white;
+}
+
+.li-responsive{
+    
 }

@@ -90,7 +90,7 @@ function CartContainer() {
   } else {
     return (
       <>
-        <Grid container>
+        <Grid container sx={{mt:"50px"}}>
           <Grid item sm={12} md={7}>
         <div className="itemscart-container">
           {cart.map((item) => (

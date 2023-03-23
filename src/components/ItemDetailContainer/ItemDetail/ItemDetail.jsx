@@ -1,9 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react'
 import "./itemDetail.css"
 import ItemCount from '../../ItemCount/ItemCount'
-import EnvioGratis from '../../EnvioGratis/EnvioGratis'
 import { Link } from 'react-router-dom'
-import { Button } from '@mui/material';
+import { Button, Chip } from '@mui/material';
 import { cartContext } from '../../../storage/cartContext'
 import { Grid } from '@mui/material'
 
@@ -26,7 +25,7 @@ function ItemDetail({title, image, detail, price, onAddToCart, stock, quantity, 
             <Grid item><h4 className='detail-title'>{title.toUpperCase()}</h4></Grid>
             <Grid item><small className='detail-desc'>{detail}</small></Grid>
             {
-              price>=7000 && <Grid item><div className='container-env'><EnvioGratis/></div></Grid>
+              price>=7000 && <Grid item><div className='container-env'><Chip label="Envío gratis" color="warning" variant="outlined"/></div></Grid>
             }
             {
               discount!==0&&<Grid item><span className="discount-msg">Descuento %{discount}</span><br/></Grid>

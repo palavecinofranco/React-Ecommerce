@@ -1,4 +1,3 @@
-import SearchBar from "./SearchBar";
 import DropdownFilter from "../DropdownFilter/DropdownFilter";
 import { Grid } from '@mui/material';
 
@@ -22,7 +21,6 @@ function NavBar (){
           </Grid>
         </Grid>
       </nav>
-      <SearchBar/>
         </>
     );
 }
