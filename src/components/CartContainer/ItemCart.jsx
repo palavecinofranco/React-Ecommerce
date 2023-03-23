@@ -2,7 +2,7 @@ import React from 'react'
 import { useCartContext } from '../../storage/cartContext';
 import DeleteIcon from '@mui/icons-material/Delete';
 import "./itemCart.css"
-import Button from '../Button/Button';
+import { Button, Tooltip } from '@mui/material';
 import { IconButton } from '@mui/material';
 
 function ItemCart({item}) {
@@ -25,22 +25,22 @@ function ItemCart({item}) {
           <span>Subtotal: ${getSubTotalPrice(idProduct)}</span>
         </div>
       </div>
-        <div className='count-container'>Cantidad
+        <div className='count'>Cantidad
           {
-            quantity===stock?<Button disabled={true} onClick={()=>addQuantity(idProduct)}>+</Button>
+            quantity===stock?<Button color='warning' variant='text' disabled={true} onClick={()=>addQuantity(idProduct)}>+</Button>
             :
-            <Button onClick={()=>addQuantity(idProduct)}>+</Button>
+            <Button color='warning' variant='text' onClick={()=>addQuantity(idProduct)}>+</Button>
           }
           <h3 className='itemcart-cantidad'>{quantity}</h3>
           {
-            quantity===1?<Button disabled={true} onClick={()=>subtractQuantity(idProduct)}>-</Button>
+            quantity===1?<Button color='warning' variant='text' disabled={true} onClick={()=>subtractQuantity(idProduct)}>-</Button>
             :
-            <Button onClick={()=>subtractQuantity(idProduct)}>-</Button>
+            <Button color='warning' variant='text' onClick={()=>subtractQuantity(idProduct)}>-</Button>
           }
         </div>
-        <IconButton className='remove-btn' aria-label="delete" onClick={()=> removeItem(idProduct)}>
+        <Tooltip title="Eliminar"><IconButton className='button-delete' sx={{right:"0", display:"inline-block", p:"0px 3px", textAlign:"center"}}  aria-label="delete" onClick={()=> removeItem(idProduct)}>
           <DeleteIcon />
-        </IconButton>
+        </IconButton></Tooltip>
   </div>
   )
 }

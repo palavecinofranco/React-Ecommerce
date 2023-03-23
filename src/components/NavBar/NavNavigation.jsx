@@ -20,7 +20,6 @@ function NavNavigation() {
 
   return (
     <>
-    <>
       <nav className="header-nav">
             <Link to={"/"}><img src={logo} alt="logo" width={150} className="logoNike"/></Link>
             <Hidden smDown>
@@ -37,12 +36,11 @@ function NavNavigation() {
             </Hidden>
       </nav>
       <nav className='nav-menu' style={{height:navHeight}}>
-          <li className='nav-li'><Link className="nav-link" to={"/productos"}>Productos</Link></li>
-          <li className='nav-li'><Link className="nav-link" to={"/"}>Tiendas</Link></li>
-          <li className='nav-li li-carrito'><Link className="nav-link-cart" to={"/cart"}><CartWidget /></Link></li>
+          <li className='nav-li li-responsive' onClick={openMenu}><Link className="nav-link" to={"/productos"}>Productos</Link></li>
+          <li className='nav-li li-responsive' onClick={openMenu}><Link className="nav-link" to={"/"}>Tiendas</Link></li>
+          <li className='nav-li li-responsive li-carrito' onClick={openMenu}><Link className="nav-link-cart" to={"/cart"}><CartWidget /></Link></li>
         </nav>
         </>
-      </>
   )
 }
 

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,300&family=Noto+Sans&family=Source+Serif+Pro&display=swap');
 
 .header-nav{
+    height: 100px;
     display: flex;
     width: 100%;
     align-items: center;
@@ -11,13 +12,14 @@
 .nav-ul{
     display: flex;
     text-align: center;
+    align-items: center;
+    justify-content: center;
     height: 100%;
 }
 
 .nav-li{
     padding: 0 15px;
     list-style-type: none;
-    height: 100%;
 }
 
 .nav-link{

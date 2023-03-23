@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { cartContext } from "../../storage/cartContext";
-import Button from "../Button/Button";
+import { Button } from '@mui/material';
 import ItemCart from "./ItemCart";
 import "./cartContainer.css";
 import logoNike from "../../Images/logonikepipa.png";
@@ -107,10 +107,10 @@ function CartContainer() {
           </form>
           <h4 className="total-price">Total: ${getTotalPrice()}</h4>
           <div className="btn-container">
-            <Button color="red" backgroundColor="pink" onClick={() => clear()}>
+            <Button variant="contained" color="error" onClick={() => clear()}>
               Vaciar Carrito
             </Button>
-            <Button color="green" onClick={handleCheckout} backgroundColor="greenyellow" disabled={formIsInvalid()}>Comprar</Button>
+            <Button variant="contained" color="success" onClick={handleCheckout} disabled={formIsInvalid()}>Comprar</Button>
           </div>
         </div>
         </Grid>

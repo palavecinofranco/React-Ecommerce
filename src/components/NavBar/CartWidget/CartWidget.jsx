@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { cartContext } from "../../../storage/cartContext";
+import ShoppingCartSharpIcon from '@mui/icons-material/ShoppingCartSharp';
 import "./CartWidget.css"
 
 function CartWidget (){
@@ -7,7 +8,7 @@ function CartWidget (){
 
     return (
         <>
-            <i className="fa-solid fa-cart-shopping carrito"></i>
+            <ShoppingCartSharpIcon/>
             {
                 context.getTotalItemsInCart() !==0 && <span className="carrito-contador">{context.getTotalItemsInCart()}</span>
             }

@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 
 .itemcart-container{
+    position: relative;
     box-sizing: border-box;
     display: flex;
     width: 90%;
@@ -25,10 +26,6 @@
     object-fit: contain;
     width: 80px;
     height: 80px;
-}
-
-.count-container{
-    font-family: 'Quicksand', sans-serif;
 }
 
 .item-properties-container{
@@ -60,4 +57,41 @@
     cursor: pointer;
     font-size: 24px;
     color: #333;
+}
+
+.count{
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 450px){
+    .itemcart-title{
+        font-size: 16px;
+    }
+
+    .itemcart-price{
+        font-size: 16px;
+    }
+
+    .itemcart-price-modified{
+        font-size: 12px;
+    }
+
+    .itemcart-container{
+        width: 98%;
+        padding: 5px 10px;
+    }
+
+    .itemcart-details{
+        gap: 10px;
+    }
+    .itemcart-cantidad{
+        font-size: 15px;
+    }
+    .button-delete{
+        bottom: 0;
+    }
 }

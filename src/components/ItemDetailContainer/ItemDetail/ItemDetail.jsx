@@ -3,7 +3,7 @@ import "./itemDetail.css"
 import ItemCount from '../../ItemCount/ItemCount'
 import EnvioGratis from '../../EnvioGratis/EnvioGratis'
 import { Link } from 'react-router-dom'
-import Button from '../../Button/Button'
+import { Button } from '@mui/material';
 import { cartContext } from '../../../storage/cartContext'
 import { Grid } from '@mui/material'
 
@@ -44,7 +44,7 @@ function ItemDetail({title, image, detail, price, onAddToCart, stock, quantity, 
               </div>
             }
             {
-              isInCart(title)?<div className='btn-container'><Link to="/cart"><Button color="black" backgroundColor="orange">Ir al carrito</Button></Link></div>
+              isInCart(title)?<div className='btn-container'><Link to="/cart" style={{textDecoration:"none"}}><Button variant='outlined' color='warning' sx={{fontFamily:"'Inter', sans-serif"}}>Ir al carrito</Button></Link></div>
               :
               <div>
                 <ItemCount className="itemcount-container" onAddToCart={onAddToCart} stock={stock} quantity={quantity}/><small className='disponibles'>Disponibles: {stock}</small>

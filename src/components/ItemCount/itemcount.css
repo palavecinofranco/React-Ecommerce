@@ -7,16 +7,6 @@
     align-items: center;
 }
 
-.btn-count{
-    background-color: orange;
-    border: none;
-    border-radius: 30%;
-    padding: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    font-family: 'Roboto', sans-serif;
-}
-
 .item-count-container{
     display: flex;
     flex-direction: column;
