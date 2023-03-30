@@ -13,7 +13,7 @@ function HomePage() {
         <BeginningSectionImg/>
         <ItemListContainer/>
         <FeaturedProducts list={getFeaturedProducts}>Articulos Destacados</FeaturedProducts>
-        <ImageWithLink image={"https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_1253,c_limit/c86fdadb-b533-4b26-9e3d-8121641481ae/sitio-web-oficial-de-nike.png"}>CAMISETAS DE FÚTBOL</ImageWithLink>
+        <ImageWithLink image={"https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_1253,c_limit/c86fdadb-b533-4b26-9e3d-8121641481ae/sitio-web-oficial-de-nike.png"} href={"/camisetas-de-futbol"}>CAMISETAS DE FÚTBOL</ImageWithLink>
         <FeaturedProducts list={getOffProducts}>Ofertas</FeaturedProducts>
     </>
   )

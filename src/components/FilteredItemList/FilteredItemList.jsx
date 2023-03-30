@@ -60,7 +60,7 @@ function FilteredItemList() {
                 }
                 </ItemList>
                 :
-                <h1 className='void-msg'>No se encontraron productos</h1>
+                <h1 className='void-msg' style={{opacity:".7"}}>No se encontraron productos</h1>
               }
         </>
   )

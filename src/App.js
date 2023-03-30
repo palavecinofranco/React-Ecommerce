@@ -14,12 +14,14 @@ import PurchaseCompleted from './components/PurchaseCompleted/PurchaseCompleted'
 import NavNavigation from './components/NavBar/NavNavigation';
 import FilteredItemList from './components/FilteredItemList/FilteredItemList';
 import FilteredProductsPage from './pages/FilteredProductsPage';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <>
     <BrowserRouter>
     <CartProvider>
+        <ScrollToTop/>
         <HeaderSlider/>
         <NavNavigation/>
         <Routes>
