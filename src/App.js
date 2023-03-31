@@ -15,6 +15,7 @@ import NavNavigation from './components/NavBar/NavNavigation';
 import FilteredItemList from './components/FilteredItemList/FilteredItemList';
 import FilteredProductsPage from './pages/FilteredProductsPage';
 import ScrollToTop from './components/ScrollToTop';
+import MapContainer from './components/StoresList/MapContainer';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path='category/:categoryid' element={<ProductsPage/>}/>
           <Route path=':genero/:generocategory' element={<FilteredProductsPage/>}/>
           <Route path='/cart' element={<CartContainer/>}/>
+          <Route path='/sucursales' element={<MapContainer/>}/>
           <Route path='*' element={<PageNotFound/>}/>
           <Route path='/productos' element={<ItemListWithFilter/>}/>
           <Route path='/completed-purchase/:orderid' element={<PurchaseCompleted/>}/>

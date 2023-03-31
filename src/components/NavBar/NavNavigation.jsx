@@ -29,7 +29,7 @@ function NavNavigation() {
             <Hidden smDown>
             <ul className='nav-ul'>
                 <li className='nav-li'><Link className="nav-link" to={"/productos"}>Productos</Link></li>
-                <li className='nav-li'><Link className="nav-link" to={"/"}>Sucursales</Link></li>
+                <li className='nav-li'><Link className="nav-link" to={"/sucursales"}>Sucursales</Link></li>
                 <li className='nav-li li-carrito'><Link className="nav-link-cart" to={"/cart"}><CartWidget /></Link></li>
             </ul>
             </Hidden>
