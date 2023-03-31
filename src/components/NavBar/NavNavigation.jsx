@@ -41,7 +41,7 @@ function NavNavigation() {
       </nav>
       <nav className='nav-menu' style={{height:navHeight, backgroundColor:"#222"}}>
           <li className='nav-li li-responsive' onClick={openMenu}><Link className="nav-link" to={"/productos"}>Productos</Link></li>
-          <li className='nav-li li-responsive' onClick={openMenu}><Link className="nav-link" to={"/"}>Sucursales</Link></li>
+          <li className='nav-li li-responsive' onClick={openMenu}><Link className="nav-link" to={"/sucursales"}>Sucursales</Link></li>
           <li className='nav-li li-responsive li-carrito' onClick={openMenu}><Link className="nav-link-cart" to={"/cart"}><CartWidget /></Link></li>
         </nav>
         <Hidden mdUp>
