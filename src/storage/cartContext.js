@@ -25,7 +25,7 @@ function CartProvider (props) {
     }
 
     function removeItem(itemId){
-        let productIndex = newCart.findIndex(product => product.productId === itemId)
+        let productIndex = newCart.findIndex(product => product.idProduct === itemId)
         newCart.splice(productIndex, 1)
         setCart(newCart);
     }
