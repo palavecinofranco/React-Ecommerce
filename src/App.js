@@ -16,12 +16,15 @@ import FilteredItemList from './components/FilteredItemList/FilteredItemList';
 import FilteredProductsPage from './pages/FilteredProductsPage';
 import ScrollToTop from './components/ScrollToTop';
 import MapContainer from './components/StoresList/MapContainer';
+import MpPurchase from './components/CartContainer/MpPurchase';
+import { UserDataProvider } from './storage/userDataContext';
 
 function App() {
   return (
     <>
     <BrowserRouter>
     <CartProvider>
+    <UserDataProvider>
         <ScrollToTop/>
         <HeaderSlider/>
         <NavNavigation/>
@@ -34,9 +37,11 @@ function App() {
           <Route path='/sucursales' element={<MapContainer/>}/>
           <Route path='*' element={<PageNotFound/>}/>
           <Route path='/productos' element={<ItemListWithFilter/>}/>
+          <Route path='/purchase' element={<MpPurchase></MpPurchase>}/>
           <Route path='/completed-purchase/:orderid' element={<PurchaseCompleted/>}/>
       </Routes>
       <Footer/>
+      </UserDataProvider>
     </CartProvider>
     </BrowserRouter>
     </>

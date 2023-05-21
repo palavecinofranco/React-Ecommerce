@@ -1,10 +1,8 @@
 
 import { initializeApp } from "firebase/app";
 import { addDoc, collection, doc, getDoc, getDocs, getFirestore, query, where } from "firebase/firestore"
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
+// Configuracion de firebase
 const firebaseConfig = {
   apiKey: "AIzaSyC68HQdWgWCtaab3rcVF233IDce_NEQeUQ",
   authDomain: "reactecommerce-9a3cf.firebaseapp.com",
